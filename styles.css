@@ -117,7 +117,7 @@ a {
 
 .hero h1 {
   margin: 0;
-  font-family: var(--serif);
+  font-family: "Big Bird", var(--serif);
   font-size: clamp(2.9rem, 5.5vw, 5.2rem);
   line-height: 0.94;
   font-weight: 500;
