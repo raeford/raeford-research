@@ -1,17 +1,18 @@
 const packages = [
   {
-    title: "Brand Direction + Identity",
-    timeline: "3-5 Week Timeline",
-    sideLabel: "What's Included",
+    title: "The 1863 North Carolina Tax Assessment Archive",
+    summary:
+      "A searchable archive of surviving 1863 county tax records—built to help families and researchers locate people in the data and follow the paper trail across time.",
+    cta: "Search the 1863 Archive",
+    sideLabel: "What You Can Do Here",
     color: "#f48753",
-    href: "#brand-direction",
+    href: "#archive-1863",
     items: [
-      "brand positioning + creative direction",
-      "primary logo and alternate lockups",
-      "custom color palette",
-      "type pairing and hierarchy",
-      "mini brand guide pdf",
-      "social and launch graphics"
+      "search names across curated record collections",
+      "view transcriptions + source images side-by-side (when available)",
+      "track people, places, and households across entries",
+      "save and share citations you can reuse in your own research",
+      "learn as you go with guides that explain what records mean (and what they don’t)"
     ]
   },
   {
@@ -56,11 +57,16 @@ servicesGrid.innerHTML = packages
         <article class="package-sheet">
           <div class="package-top">
             <h2 class="package-title">${service.title}</h2>
-            <p class="package-meta">${service.timeline}</p>
+            <p class="package-meta">${service.timeline ?? service.cta ?? ""}</p>
           </div>
           <div class="package-bottom">
             <p class="package-side">${service.sideLabel}</p>
             <div class="package-content">
+              ${
+                service.summary
+                  ? `<p class="package-summary">${service.summary}</p>`
+                  : ""
+              }
               <ul class="package-list">
                 ${service.items.map((item) => `<li>${item}</li>`).join("")}
               </ul>
