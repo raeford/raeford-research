@@ -5,7 +5,7 @@ const packages = [
       "A searchable archive of surviving 1863 county tax records—built to help families and researchers locate people in the data and follow the paper trail across time.",
     cta: "Search the 1863 Archive",
     sideLabel: "What You Can Do Here",
-    color: "#f48753",
+    color: "#2A5B6C",
     href: "#archive-1863",
     items: [
       "search names across curated record collections",
@@ -19,7 +19,7 @@ const packages = [
     title: "Website Design + Build",
     timeline: "4-8 Week Timeline",
     sideLabel: "What's Included",
-    color: "#c7a24b",
+    color: "#EFC052",
     href: "#website-design",
     items: [
       "site architecture and page planning",
@@ -34,7 +34,7 @@ const packages = [
     title: "Studio Extras",
     timeline: "A La Carte Services",
     sideLabel: "Add To Your Package",
-    color: "#e6c9d4",
+    color: "#B0BCA1",
     href: "#studio-extras",
     items: [
       "campaign graphics",

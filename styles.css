@@ -7,15 +7,35 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Birdie";
+  src: url("fonts/TAYBirdieRegular.woff2") format("woff2"),
+    url("fonts/TAYBirdieRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wingman";
+  src: url("fonts/TAYWingman.woff2") format("woff2"),
+    url("fonts/TAYWingman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --paper: #efede5;
-  --paper-shadow: #e3dfd3;
-  --ink: #17130f;
-  --muted: rgba(23, 19, 15, 0.7);
-  --line: rgba(23, 19, 15, 0.75);
-  --card-1: #f48753;
-  --card-2: #c7a24b;
-  --card-3: #e6c9d4;
+  --paper: #f0eee8;
+  --paper-shadow: #e3e0d8;
+  --ink: #292621;
+  --muted: rgba(41, 38, 33, 0.7);
+  --line: rgba(41, 38, 33, 0.72);
+  --canyon: #2a5b6c;
+  --evergreen: #545c37;
+  --sage: #b0bca1;
+  --balsamroot: #efc052;
+  --alpenglow: #ea8f5c;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", "Helvetica Neue", sans-serif;
   --mono: "IBM Plex Mono", "SFMono-Regular", monospace;
@@ -29,7 +49,9 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-shadow) 100%);
+  background:
+    linear-gradient(180deg, rgba(176, 188, 161, 0.12), transparent 28%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-shadow) 100%);
   color: var(--ink);
 }
 
@@ -47,11 +69,11 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(23, 19, 15, 0.065) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(23, 19, 15, 0.065) 1px, transparent 1px);
+    linear-gradient(to right, rgba(41, 38, 33, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(41, 38, 33, 0.055) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.8) 36%, rgba(0, 0, 0, 0.35) 64%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.8) 36%, rgba(0, 0, 0, 0.35) 64%, transparent 100%);
+  mask-image: radial-gradient(circle at 50% 22%, rgba(0, 0, 0, 0.92) 0 16%, rgba(0, 0, 0, 0.42) 30%, transparent 48%);
+  -webkit-mask-image: radial-gradient(circle at 50% 22%, rgba(0, 0, 0, 0.92) 0 16%, rgba(0, 0, 0, 0.42) 30%, transparent 48%);
 }
 
 a {
@@ -149,7 +171,7 @@ a {
 }
 
 .package-card:hover .package-sheet {
-  box-shadow: 0 16px 28px rgba(23, 19, 15, 0.09);
+  box-shadow: 0 16px 28px rgba(41, 38, 33, 0.1);
 }
 
 .package-tab {
@@ -196,6 +218,22 @@ a {
   letter-spacing: 0.01em;
 }
 
+.services-grid .package-card:nth-child(2) .package-content,
+.services-grid .package-card:nth-child(2) .package-summary,
+.services-grid .package-card:nth-child(2) .package-list {
+  font-family: "Birdie", var(--sans);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.services-grid .package-card:nth-child(3) .package-content,
+.services-grid .package-card:nth-child(3) .package-summary,
+.services-grid .package-card:nth-child(3) .package-list {
+  font-family: "Wingman", var(--sans);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .package-meta {
   font-family: var(--mono);
   letter-spacing: 0.06em;
@@ -205,7 +243,7 @@ a {
 
 .package-summary {
   margin: 0 0 14px;
-  color: rgba(23, 19, 15, 0.8);
+  color: rgba(41, 38, 33, 0.82);
   font-size: 0.96rem;
   line-height: 1.6;
 }
@@ -311,10 +349,10 @@ a {
   gap: 10px;
   min-width: 260px;
   padding: 10px 14px;
-  border: 1.5px solid rgba(23, 19, 15, 0.18);
+  border: 1.5px solid rgba(41, 38, 33, 0.18);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.38);
-  color: rgba(23, 19, 15, 0.45);
+  color: rgba(41, 38, 33, 0.45);
 }
 
 .updates-search input {
