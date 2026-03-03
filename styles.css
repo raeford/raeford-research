@@ -24,8 +24,25 @@ body {
   color: var(--ink);
 }
 
+
 body {
   font-family: var(--sans);
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(23, 19, 15, 0.065) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 19, 15, 0.065) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.8) 36%, rgba(0, 0, 0, 0.35) 64%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.8) 36%, rgba(0, 0, 0, 0.35) 64%, transparent 100%);
 }
 
 a {
@@ -34,6 +51,8 @@ a {
 }
 
 .page-shell {
+  position: relative;
+  z-index: 1;
   width: min(1120px, calc(100vw - 48px));
   margin: 0 auto;
   padding: 28px 0 72px;
