@@ -75,7 +75,6 @@ a {
 .brand,
 .site-nav a,
 .eyebrow,
-.package-meta,
 .package-side,
 .package-list,
 .site-footer code {
@@ -182,8 +181,17 @@ a {
 }
 
 .package-meta {
+  font-family: var(--mono);
+  letter-spacing: 0.06em;
   font-size: 0.74rem;
   white-space: nowrap;
+}
+
+.package-summary {
+  margin: 0 0 14px;
+  color: rgba(23, 19, 15, 0.8);
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
 
 .package-bottom {
