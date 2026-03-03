@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Big Bird";
+  src: url("fonts/Big_Bird_Standard/TAYBigBirdRegular.woff2") format("woff2"),
+    url("fonts/Big_Bird_Standard/TAYBigBirdRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --paper: #efede5;
   --paper-shadow: #e3dfd3;
@@ -178,6 +187,13 @@ a {
   font-weight: 400;
   font-size: clamp(2rem, 3.2vw, 3.05rem);
   line-height: 0.95;
+}
+
+
+.services-grid .package-card:nth-child(2) .package-title {
+  font-family: "Big Bird", var(--serif);
+  font-style: normal;
+  letter-spacing: 0.01em;
 }
 
 .package-meta {
